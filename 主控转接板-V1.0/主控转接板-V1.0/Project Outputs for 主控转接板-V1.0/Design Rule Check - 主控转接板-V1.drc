@@ -1,0 +1,60 @@
+Protel Design System Design Rule Check
+PCB File : F:\[17]大然科技\主控转接板\主控转接板-V1.0\主控转接板-V1.0.PcbDoc
+Date     : 2018/11/6
+Time     : 10:54:39
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Silk primitive without silk layer
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Text "Raspberry Pi Zero W" (1661.98mil,435.815mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Text "U?" (1662.496mil,2665.268mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Text "Header 4" (2462.287mil,1194.925mil)  Top Overlay
+Rule Violations :3
+
+Processing Rule : Silk to Silk (Clearance=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=4mil) (All),(All)
+   Violation between Via (2134.787mil,2224.425mil) Top Layer to Bottom Layer and 
+                     Pad U2-7(2164.63mil,2226.37mil)  Top Layer
+Rule Violations :1
+
+Processing Rule : Hole To Hole Clearance (Gap=4mil) (All),(All)
+   Violation between Pad S1-0(3754.921mil,1931.102mil)  Multi-Layer and 
+                     Pad S1-0(3745.079mil,1931.102mil)  Multi-Layer
+   Violation between Pad S1-0(3745.079mil,2207.677mil)  Multi-Layer and 
+                     Pad S1-0(3754.921mil,2207.677mil)  Multi-Layer
+Rule Violations :2
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=100mil) (Preferred=50mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=4mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+   Violation between Pad S1-0(3754.921mil,1931.102mil)  Multi-Layer and 
+                     Pad S1-0(3745.079mil,1931.102mil)  Multi-Layer
+   Violation between Pad S1-0(3745.079mil,2207.677mil)  Multi-Layer and 
+                     Pad S1-0(3754.921mil,2207.677mil)  Multi-Layer
+Rule Violations :2
+
+
+Violations Detected : 8
+Time Elapsed        : 00:00:01

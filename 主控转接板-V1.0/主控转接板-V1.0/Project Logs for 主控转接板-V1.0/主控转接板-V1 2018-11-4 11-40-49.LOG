@@ -1,0 +1,6 @@
+Added Component: Designator=P0(MP2315GJ)
+Added Pin To Net: NetName=5.0V Pin=P0-1
+Added Pin To Net: NetName=GND Pin=P0-2
+Added Pin To Net: NetName=VCC_OUT Pin=P0-3
+Added Pin To Net: NetName=EN Pin=P0-4
+Added Member To Class: ClassName=Ö÷¿Ø×ª½Ó°å-V1.0 Member=Component P0 Header 4

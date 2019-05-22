@@ -1,0 +1,21 @@
+Added Component: Designator=C10(Cap_0603)
+Added Component: Designator=C11(Cap_0603)
+Added Component: Designator=SWD(HDR1X4_)
+Added Component: Designator=U7(LC-SOT-89(SOT-89-3))
+Added Pin To Net: NetName=GND Pin=C10-1
+Added Pin To Net: NetName=VCC Pin=C10-2
+Added Pin To Net: NetName=GND Pin=C11-1
+Added Pin To Net: NetName=GND Pin=SWD-1
+Added Pin To Net: NetName=SWCLK Pin=SWD-2
+Added Pin To Net: NetName=SWDIO Pin=SWD-3
+Added Pin To Net: NetName=3.3V Pin=SWD-4
+Added Pin To Net: NetName=GND Pin=U7-1
+Added Pin To Net: NetName=VCC Pin=U7-3
+Added Pin To Net: NetName=5.0V Pin=C11-2
+Added Pin To Net: NetName=5.0V Pin=U7-2
+Added Pin To Net: NetName=5.0V Pin=U7-2
+Added Net: Name=5.0V
+Added Member To Class: ClassName=总线驱动板-V1.0 Member=Component C10 C0603
+Added Member To Class: ClassName=总线驱动板-V1.0 Member=Component C11 C0603
+Added Member To Class: ClassName=总线驱动板-V1.0 Member=Component SWD Header 4
+Added Member To Class: ClassName=总线驱动板-V1.0 Member=Component U7 AMS1117

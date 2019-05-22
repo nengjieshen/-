@@ -1,0 +1,8 @@
+Added Pin To Net: NetName=VCC-OUT Pin=BUS1-2
+Added Pin To Net: NetName=VCC-OUT Pin=BUS2-2
+Added Pin To Net: NetName=VCC-OUT Pin=P0-3
+Added Pin To Net: NetName=VCC-IN Pin=PW1-1
+Added Pin To Net: NetName=VCC-IN Pin=PW2-1
+Change Net Name : Old Net Name=VCC-IN New Net Name=VCC_IN
+Change Net Name : Old Net Name=VCC-OUT New Net Name=VCC_OUT
+Added Room: Name=Ö÷¿Ø×ª½Ó°å-V2.0

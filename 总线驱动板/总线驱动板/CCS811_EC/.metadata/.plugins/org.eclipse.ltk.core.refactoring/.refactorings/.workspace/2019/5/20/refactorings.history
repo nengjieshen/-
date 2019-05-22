@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;CCS811_EC&apos;" deleteContents="false" description="Delete resource &apos;CCS811_EC&apos;" element1="/CCS811_EC" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1557893673706"/>
+</session>

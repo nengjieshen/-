@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="&quot;${ProjDirPath}/Drivers&quot;" key="org.eclipse.cdt.utils.ui.controls.FileListControl"/>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+	</section>
+	<section name="PDOMSearchPage">
+		<item value="false" key="caseSensitive"/>
+		<item value="227191" key="searchFlags"/>
+		<list key="previousPatterns">
+			<item value="TIM_CounterMode_Up"/>
+			<item value="bmp"/>
+			<item value="HSE_VALUE"/>
+			<item value="uint32_t"/>
+			<item value="u32"/>
+			<item value="Delay_1ms"/>
+			<item value="Delay_50ms"/>
+			<item value="Delay_ms"/>
+			<item value="BMP1"/>
+			<item value="GPIO_Pin_6"/>
+			<item value="OS_CRITICAL_METHOD"/>
+		</list>
+	</section>
+	<section name="NewClassWizardPage">
+	</section>
+	<section name="OptionalMessageDialog.hide.">
+		<item value="0" key="askReindex.detail"/>
+	</section>
+	<section name="completion_proposal_size">
+	</section>
+</section>

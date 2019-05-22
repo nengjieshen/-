@@ -1,0 +1,8 @@
+Added Component: Designator=R_J1(Res_0603)
+Added Component: Designator=R_J2(Res_0603)
+Added Pin To Net: NetName=5.0V Pin=R_J1-1
+Added Pin To Net: NetName=I2C_SCL Pin=R_J1-2
+Added Pin To Net: NetName=5.0V Pin=R_J2-1
+Added Pin To Net: NetName=I2C_SDA Pin=R_J2-2
+Added Member To Class: ClassName=主控转接板-V1.0 Member=Component R_J1 1K
+Added Member To Class: ClassName=主控转接板-V1.0 Member=Component R_J2 1K

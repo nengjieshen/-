@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=GND Pin=220u-1
+Removed Pin From Net: NetName=VCC_IN Pin=220u-2
+Removed Pin From Net: NetName=GND Pin=C5-1
+Removed Pin From Net: NetName=NetC_K_1 Pin=C5-2
+Removed Pin From Net: NetName=5.0V Pin=C8-1
+Removed Pin From Net: NetName=GND Pin=C8-2
+Removed Pin From Net: NetName=VCC_IN Pin=C9-1
+Removed Pin From Net: NetName=NetQ3_3 Pin=Q3-2
+Removed Pin From Net: NetName=GND Pin=Q3-3
+Change Component Comment : Designator=R_K1 Old Comment=1K New Comment=51K
+Change Component Comment : Designator=R_K3 Old Comment=1K New Comment=510K
+Change Component Comment : Designator=R_K4 Old Comment=1K New Comment=510K
+Change Component Comment : Designator=R_K2 Old Comment=1K New Comment=
+Change Component Comment : Designator=Q2 Old Comment=IR9540 New Comment=IRF9540
+Added Component: Designator=C_K(Cap_0603)
+Added Pin To Net: NetName=NetC_K_1 Pin=C_K-1
+Added Pin To Net: NetName=GND Pin=C_K-2
+Added Pin To Net: NetName=GND Pin=Q3-2
+Added Pin To Net: NetName=NetQ3_3 Pin=Q3-3
+Added Member To Class: ClassName=主控转接板-V1.0 Member=Component C_K 4.7uF
+Added Room: Name=主控转接板-V1.0

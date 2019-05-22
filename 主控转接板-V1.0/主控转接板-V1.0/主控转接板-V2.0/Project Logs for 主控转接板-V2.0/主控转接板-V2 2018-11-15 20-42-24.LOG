@@ -1,0 +1,27 @@
+Removed Pin From Net: NetName=I2C_SDA Pin=U?-1
+Removed Pin From Net: NetName=I2C_SCL Pin=U?-3
+Removed Pin From Net: NetName=GND Pin=U?-4
+Removed Pin From Net: NetName=TX Pin=U?-6
+Removed Pin From Net: NetName=GND Pin=U?-7
+Removed Pin From Net: NetName=RX Pin=U?-8
+Removed Pin From Net: NetName=GND Pin=U?-12
+Removed Pin From Net: NetName=GND Pin=U?-18
+Removed Pin From Net: NetName=GND Pin=U?-23
+Removed Pin From Net: NetName=GND Pin=U?-28
+Removed Pin From Net: NetName=GND Pin=U?-32
+Removed Pin From Net: NetName=GND Pin=U?-37
+Change Component Designator: OldDesignator=8050 NewDesignator=Q1
+Added Pin To Net: NetName=I2C_SDA Pin=U?-3
+Added Pin To Net: NetName=5.0V Pin=U?-4
+Added Pin To Net: NetName=I2C_SCL Pin=U?-5
+Added Pin To Net: NetName=GND Pin=U?-6
+Added Pin To Net: NetName=TX Pin=U?-8
+Added Pin To Net: NetName=GND Pin=U?-9
+Added Pin To Net: NetName=RX Pin=U?-10
+Added Pin To Net: NetName=GND Pin=U?-14
+Added Pin To Net: NetName=GND Pin=U?-20
+Added Pin To Net: NetName=GND Pin=U?-25
+Added Pin To Net: NetName=GND Pin=U?-30
+Added Pin To Net: NetName=GND Pin=U?-34
+Added Pin To Net: NetName=GND Pin=U?-39
+Added Room: Name=Ö÷¿Ø×ª½Ó°å-V2.0

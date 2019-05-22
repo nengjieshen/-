@@ -1,0 +1,31 @@
+Change Component Footprint: Designator=C1 Old Footprint=0603 C New Footprint=Cap_0603
+Change Component Footprint: Designator=C2 Old Footprint=0603 C New Footprint=Cap_0603
+Change Component Footprint: Designator=C3 Old Footprint=0603 C New Footprint=Cap_0603
+Change Component Footprint: Designator=R1 Old Footprint=0603 R New Footprint=Res_0603
+Change Component Footprint: Designator=R2 Old Footprint=0603 R New Footprint=Res_0603
+Change Component Footprint: Designator=R3 Old Footprint=0603 R New Footprint=Res_0603
+Added Pin To Net: NetName=GND Pin=BUS1-3
+Added Pin To Net: NetName=GND Pin=BUS2-3
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C3-2
+Added Pin To Net: NetName=GND Pin=LED1-K
+Added Pin To Net: NetName=GND Pin=P0-2
+Added Pin To Net: NetName=GND Pin=PW1-2
+Added Pin To Net: NetName=GND Pin=PW2-2
+Added Pin To Net: NetName=GND Pin=Q1-2
+Added Pin To Net: NetName=GND Pin=Q3-3
+Added Pin To Net: NetName=GND Pin=U1-1
+Added Pin To Net: NetName=GND Pin=U2-4
+Added Pin To Net: NetName=GND Pin=U3-5
+Added Pin To Net: NetName=GND Pin=U3-8
+Added Pin To Net: NetName=GND Pin=U?-6
+Added Pin To Net: NetName=GND Pin=U?-9
+Added Pin To Net: NetName=GND Pin=U?-14
+Added Pin To Net: NetName=GND Pin=U?-20
+Added Pin To Net: NetName=GND Pin=U?-25
+Added Pin To Net: NetName=GND Pin=U?-30
+Added Pin To Net: NetName=GND Pin=U?-34
+Added Pin To Net: NetName=GND Pin=U?-39
+Added Net: Name=GND
+Added Room: Name=Ö÷¿Ø×ª½Ó°å-V1.0

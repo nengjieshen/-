@@ -1,0 +1,11 @@
+Added Component: Designator=BUS1(3P)
+Added Component: Designator=BUS2(3P)
+Added Pin To Net: NetName=BUS Pin=BUS1-1
+Added Pin To Net: NetName=VCC Pin=BUS1-2
+Added Pin To Net: NetName=GND Pin=BUS1-3
+Added Pin To Net: NetName=BUS Pin=BUS2-1
+Added Pin To Net: NetName=VCC Pin=BUS2-2
+Added Pin To Net: NetName=GND Pin=BUS2-3
+Added Member To Class: ClassName=主控转接板-V1.0 Member=Component BUS1 Header 3
+Added Member To Class: ClassName=主控转接板-V1.0 Member=Component BUS2 Header 3
+Added Room: Name=主控转接板-V1.0

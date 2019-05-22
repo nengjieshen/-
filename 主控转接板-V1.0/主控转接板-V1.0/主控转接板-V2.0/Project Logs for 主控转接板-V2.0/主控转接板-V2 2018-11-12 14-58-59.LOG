@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=VCC_IN Pin=BUS1-2
+Removed Pin From Net: NetName=VCC_IN Pin=BUS2-2
+Added Pin To Net: NetName=VCC_OUT Pin=BUS1-2
+Added Pin To Net: NetName=VCC_OUT Pin=BUS2-2
+Added Room: Name=Ö÷¿Ø×ª½Ó°å-V2.0

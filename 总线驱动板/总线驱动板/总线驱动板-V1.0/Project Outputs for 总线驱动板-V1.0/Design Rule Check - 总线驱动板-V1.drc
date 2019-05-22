@@ -1,0 +1,161 @@
+Protel Design System Design Rule Check
+PCB File : F:\[0]毕业\大四下\[3]毕业设计\总线驱动板\总线驱动板-V1.0\总线驱动板-V1.0.PcbDoc
+Date     : 2019/4/1
+Time     : 13:22:36
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+   Violation between Net Antennae: Via (3149.606mil,2440.945mil) Top Layer to Bottom Layer
+   Violation between Net Antennae: Via (3228.347mil,2755.905mil) Top Layer to Bottom Layer
+   Violation between Net Antennae: Via (3149.606mil,2755.905mil) Top Layer to Bottom Layer
+   Violation between Net Antennae: Via (3070.866mil,2755.905mil) Top Layer to Bottom Layer
+   Violation between Net Antennae: Via (3149.606mil,2677.165mil) Top Layer to Bottom Layer
+   Violation between Net Antennae: Via (3070.866mil,2677.165mil) Top Layer to Bottom Layer
+Rule Violations :6
+
+Processing Rule : Silk primitive without silk layer
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (2360.236mil,3346.457mil)(2489.724mil,3346.457mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (2360.236mil,2952.756mil)(2553.15mil,2952.756mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (2360.236mil,2952.756mil)(2360.236mil,3346.457mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (2360.236mil,2952.756mil)(2489.724mil,2952.756mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (2360.236mil,2559.055mil)(2553.15mil,2559.055mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (2360.236mil,2559.055mil)(2360.236mil,2952.756mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Text "LM2596" (3377.177mil,1933.925mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Text "INDUCTOR" (3903.508mil,2175.76mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Text "IN5822" (3696.972mil,2297.815mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Text "CAP_B" (2731.461mil,2208.13mil)  Top Overlay
+Rule Violations :10
+
+Processing Rule : Silk to Silk (Clearance=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=6mil) (All),(All)
+   Violation between Via (3110mil,2914mil) Top Layer to Bottom Layer and 
+                     Pad C9-2(3081.496mil,2952.756mil)  Top Layer
+   Violation between Pad U0-2(3266.583mil,3412.449mil)  Top Layer and 
+                     Pad U0-1(3286.268mil,3412.449mil)  Top Layer
+   Violation between Pad U0-3(3246.898mil,3412.449mil)  Top Layer and 
+                     Pad U0-2(3266.583mil,3412.449mil)  Top Layer
+   Violation between Pad U0-4(3227.213mil,3412.449mil)  Top Layer and 
+                     Pad U0-3(3246.898mil,3412.449mil)  Top Layer
+   Violation between Pad U0-5(3207.527mil,3412.449mil)  Top Layer and 
+                     Pad U0-4(3227.213mil,3412.449mil)  Top Layer
+   Violation between Pad U0-6(3187.842mil,3412.449mil)  Top Layer and 
+                     Pad U0-5(3207.527mil,3412.449mil)  Top Layer
+   Violation between Pad U0-7(3168.157mil,3412.449mil)  Top Layer and 
+                     Pad U0-6(3187.842mil,3412.449mil)  Top Layer
+   Violation between Pad U0-8(3148.472mil,3412.449mil)  Top Layer and 
+                     Pad U0-7(3168.157mil,3412.449mil)  Top Layer
+   Violation between Pad U0-9(3128.787mil,3412.449mil)  Top Layer and 
+                     Pad U0-8(3148.472mil,3412.449mil)  Top Layer
+   Violation between Pad U0-10(3109.102mil,3412.449mil)  Top Layer and 
+                     Pad U0-9(3128.787mil,3412.449mil)  Top Layer
+   Violation between Pad U0-11(3089.417mil,3412.449mil)  Top Layer and 
+                     Pad U0-10(3109.102mil,3412.449mil)  Top Layer
+   Violation between Pad U0-12(3069.732mil,3412.449mil)  Top Layer and 
+                     Pad U0-11(3089.417mil,3412.449mil)  Top Layer
+   Violation between Pad U0-14(3018.551mil,3341.583mil)  Top Layer and 
+                     Pad U0-13(3018.551mil,3361.268mil)  Top Layer
+   Violation between Pad U0-15(3018.551mil,3321.898mil)  Top Layer and 
+                     Pad U0-14(3018.551mil,3341.583mil)  Top Layer
+   Violation between Pad U0-16(3018.551mil,3302.213mil)  Top Layer and 
+                     Pad U0-15(3018.551mil,3321.898mil)  Top Layer
+   Violation between Pad U0-17(3018.551mil,3282.528mil)  Top Layer and 
+                     Pad U0-16(3018.551mil,3302.213mil)  Top Layer
+   Violation between Pad U0-18(3018.551mil,3262.843mil)  Top Layer and 
+                     Pad U0-17(3018.551mil,3282.528mil)  Top Layer
+   Violation between Pad U0-19(3018.551mil,3243.157mil)  Top Layer and 
+                     Pad U0-18(3018.551mil,3262.843mil)  Top Layer
+   Violation between Pad U0-20(3018.551mil,3223.472mil)  Top Layer and 
+                     Pad U0-19(3018.551mil,3243.157mil)  Top Layer
+   Violation between Pad U0-21(3018.551mil,3203.787mil)  Top Layer and 
+                     Pad U0-20(3018.551mil,3223.472mil)  Top Layer
+   Violation between Pad U0-22(3018.551mil,3184.102mil)  Top Layer and 
+                     Pad U0-21(3018.551mil,3203.787mil)  Top Layer
+   Violation between Pad U0-23(3018.551mil,3164.417mil)  Top Layer and 
+                     Pad U0-22(3018.551mil,3184.102mil)  Top Layer
+   Violation between Pad U0-24(3018.551mil,3144.732mil)  Top Layer and 
+                     Pad U0-23(3018.551mil,3164.417mil)  Top Layer
+   Violation between Pad U0-26(3089.417mil,3093.551mil)  Top Layer and 
+                     Pad U0-25(3069.732mil,3093.551mil)  Top Layer
+   Violation between Pad U0-27(3109.102mil,3093.551mil)  Top Layer and 
+                     Pad U0-26(3089.417mil,3093.551mil)  Top Layer
+   Violation between Pad U0-28(3128.787mil,3093.551mil)  Top Layer and 
+                     Pad U0-27(3109.102mil,3093.551mil)  Top Layer
+   Violation between Pad U0-29(3148.472mil,3093.551mil)  Top Layer and 
+                     Pad U0-28(3128.787mil,3093.551mil)  Top Layer
+   Violation between Pad U0-30(3168.157mil,3093.551mil)  Top Layer and 
+                     Pad U0-29(3148.472mil,3093.551mil)  Top Layer
+   Violation between Pad U0-31(3187.842mil,3093.551mil)  Top Layer and 
+                     Pad U0-30(3168.157mil,3093.551mil)  Top Layer
+   Violation between Pad U0-32(3207.527mil,3093.551mil)  Top Layer and 
+                     Pad U0-31(3187.842mil,3093.551mil)  Top Layer
+   Violation between Pad U0-33(3227.213mil,3093.551mil)  Top Layer and 
+                     Pad U0-32(3207.527mil,3093.551mil)  Top Layer
+   Violation between Pad U0-34(3246.898mil,3093.551mil)  Top Layer and 
+                     Pad U0-33(3227.213mil,3093.551mil)  Top Layer
+   Violation between Pad U0-35(3266.583mil,3093.551mil)  Top Layer and 
+                     Pad U0-34(3246.898mil,3093.551mil)  Top Layer
+   Violation between Pad U0-36(3286.268mil,3093.551mil)  Top Layer and 
+                     Pad U0-35(3266.583mil,3093.551mil)  Top Layer
+   Violation between Pad U0-38(3337.449mil,3164.417mil)  Top Layer and 
+                     Pad U0-37(3337.449mil,3144.732mil)  Top Layer
+   Violation between Pad U0-39(3337.449mil,3184.102mil)  Top Layer and 
+                     Pad U0-38(3337.449mil,3164.417mil)  Top Layer
+   Violation between Pad U0-40(3337.449mil,3203.787mil)  Top Layer and 
+                     Pad U0-39(3337.449mil,3184.102mil)  Top Layer
+   Violation between Pad U0-41(3337.449mil,3223.472mil)  Top Layer and 
+                     Pad U0-40(3337.449mil,3203.787mil)  Top Layer
+   Violation between Pad U0-42(3337.449mil,3243.157mil)  Top Layer and 
+                     Pad U0-41(3337.449mil,3223.472mil)  Top Layer
+   Violation between Pad U0-43(3337.449mil,3262.843mil)  Top Layer and 
+                     Pad U0-42(3337.449mil,3243.157mil)  Top Layer
+   Violation between Pad U0-44(3337.449mil,3282.528mil)  Top Layer and 
+                     Pad U0-43(3337.449mil,3262.843mil)  Top Layer
+   Violation between Pad U0-45(3337.449mil,3302.213mil)  Top Layer and 
+                     Pad U0-44(3337.449mil,3282.528mil)  Top Layer
+   Violation between Pad U0-46(3337.449mil,3321.898mil)  Top Layer and 
+                     Pad U0-45(3337.449mil,3302.213mil)  Top Layer
+   Violation between Pad U0-47(3337.449mil,3341.583mil)  Top Layer and 
+                     Pad U0-46(3337.449mil,3321.898mil)  Top Layer
+   Violation between Pad U0-48(3337.449mil,3361.268mil)  Top Layer and 
+                     Pad U0-47(3337.449mil,3341.583mil)  Top Layer
+   Violation between Via (3110mil,2914mil) Top Layer to Bottom Layer and 
+                     Pad C2-1(3081.496mil,2874.016mil)  Top Layer
+   Violation between Via (3110mil,2914mil) Top Layer to Bottom Layer and 
+                     Pad U5-5(3149.606mil,2923.228mil)  Top Layer
+   Violation between Via (3110mil,2914mil) Top Layer to Bottom Layer and 
+                     Pad U5-6(3149.606mil,2903.543mil)  Top Layer
+   Violation between Via (2899mil,2879mil) Top Layer to Bottom Layer and 
+                     Pad U1-2(2893.701mil,2814.961mil)  Top Layer
+Rule Violations :49
+
+Processing Rule : Hole To Hole Clearance (Gap=6mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=100mil) (Preferred=50mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=6mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+
+Violations Detected : 65
+Time Elapsed        : 00:00:03

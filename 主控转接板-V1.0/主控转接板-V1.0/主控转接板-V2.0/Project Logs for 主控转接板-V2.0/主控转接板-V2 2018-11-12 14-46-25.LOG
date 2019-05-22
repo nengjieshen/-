@@ -1,0 +1,25 @@
+Added Component: Designator=BUS1(3P)
+Added Component: Designator=BUS2(3P)
+Added Component: Designator=P0(MP2315GJ)
+Added Component: Designator=PW1(2P)
+Added Component: Designator=PW2(2P)
+Added Pin To Net: NetName=BUS Pin=BUS1-1
+Added Pin To Net: NetName=VCC_IN Pin=BUS1-2
+Added Pin To Net: NetName=GND Pin=BUS1-3
+Added Pin To Net: NetName=BUS Pin=BUS2-1
+Added Pin To Net: NetName=VCC_IN Pin=BUS2-2
+Added Pin To Net: NetName=GND Pin=BUS2-3
+Added Pin To Net: NetName=5.0V Pin=P0-1
+Added Pin To Net: NetName=GND Pin=P0-2
+Added Pin To Net: NetName=VCC_OUT Pin=P0-3
+Added Pin To Net: NetName=EN Pin=P0-4
+Added Pin To Net: NetName=VCC_IN Pin=PW1-1
+Added Pin To Net: NetName=GND Pin=PW1-2
+Added Pin To Net: NetName=VCC_IN Pin=PW2-1
+Added Pin To Net: NetName=GND Pin=PW2-2
+Added Member To Class: ClassName=主控转接板-V2.0 Member=Component BUS1 Header 3
+Added Member To Class: ClassName=主控转接板-V2.0 Member=Component BUS2 Header 3
+Added Member To Class: ClassName=主控转接板-V2.0 Member=Component P0 Header 4
+Added Member To Class: ClassName=主控转接板-V2.0 Member=Component PW1 Header_1X2
+Added Member To Class: ClassName=主控转接板-V2.0 Member=Component PW2 Header_1X2
+Added Room: Name=主控转接板-V2.0

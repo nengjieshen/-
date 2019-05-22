@@ -1,0 +1,43 @@
+Added Component: Designator=C4(Cap_6.3*7.7)
+Added Component: Designator=C5(Cap_6.3*7.7)
+Added Component: Designator=C6(Cap_6.3*7.7)
+Added Component: Designator=C7(Cap_6.3*7.7)
+Added Pin To Net: NetName=5.0V Pin=C4-1
+Added Pin To Net: NetName=5.0V Pin=C7-1
+Added Pin To Net: NetName=GND Pin=BUS1-3
+Added Pin To Net: NetName=GND Pin=BUS2-3
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C3-2
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=GND Pin=C6-2
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=GND Pin=LED1-K
+Added Pin To Net: NetName=GND Pin=P0-2
+Added Pin To Net: NetName=GND Pin=PW1-2
+Added Pin To Net: NetName=GND Pin=PW2-2
+Added Pin To Net: NetName=GND Pin=Q1-2
+Added Pin To Net: NetName=GND Pin=Q3-3
+Added Pin To Net: NetName=GND Pin=U1-1
+Added Pin To Net: NetName=GND Pin=U2-4
+Added Pin To Net: NetName=GND Pin=U3-5
+Added Pin To Net: NetName=GND Pin=U3-8
+Added Pin To Net: NetName=GND Pin=U?-6
+Added Pin To Net: NetName=GND Pin=U?-9
+Added Pin To Net: NetName=GND Pin=U?-14
+Added Pin To Net: NetName=GND Pin=U?-20
+Added Pin To Net: NetName=GND Pin=U?-25
+Added Pin To Net: NetName=GND Pin=U?-30
+Added Pin To Net: NetName=GND Pin=U?-34
+Added Pin To Net: NetName=GND Pin=U?-39
+Added Net: Name=GND
+Added Pin To Net: NetName=VCC Pin=C5-1
+Added Pin To Net: NetName=VCC Pin=C6-1
+Added Net: Name=VCC
+Added Member To Class: ClassName=主控转接板-V1.0 Member=Component C4 Cap 3
+Added Member To Class: ClassName=主控转接板-V1.0 Member=Component C5 Cap 3
+Added Member To Class: ClassName=主控转接板-V1.0 Member=Component C6 Cap 3
+Added Member To Class: ClassName=主控转接板-V1.0 Member=Component C7 Cap 3
+Added Member To Class: ClassName=主控转接板-V1.0 Member=Component U? Raspberry Pi Zero W
+Added Room: Name=主控转接板-V1.0

@@ -1,0 +1,381 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body {
+			font-family : verdana;
+		}
+		td, th {
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;
+		}
+		th {
+			background-color : #A6CAF0;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+		}
+		
+		.DRC_summary_header {							
+			padding-bottom : 0.1em;
+			border : 0px solid black;							
+			width: 100%;
+                        align: right;
+                        
+		}
+
+		.DRC_summary_header_col1, 
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3
+		{
+			color : black;
+			font-size:150%;
+                        padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2: 0em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top;
+			font-weight: bold;				
+		}
+		
+		.DRC_summary_header_col1 	
+		{		                       
+			text-align: right;
+                        width: auto;	
+		}
+
+		.DRC_summary_header_col2 	
+		{		
+			text-align: center;	
+		}
+
+		.DRC_summary_header_col3 	
+		{		
+			text-align: left;	
+		}
+
+
+		
+		.header_holder
+		{
+		Width = 100%;
+		border = 0px solid green;
+		padding = 0;
+		}
+		
+		
+		
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+                {
+			left:0;
+			top:0;
+			padding-top : 0.1em;			
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top
+
+		}
+		.front_matter {	
+			
+			margin-top: 5px;
+ 			margin-left: 0px;					 			
+ 			horizontal-align: left;
+		}
+				
+		
+		.front_matter_column1 {
+			width : 10em;	
+			text-align  : right;
+			padding-right:0.1em;
+			
+		}
+		
+		.front_matter_column2 {
+                        width: 0.1em;
+			align: center;
+			text-align : center;
+			margin-right  : 0.1em;	
+			margin-left   : 0.1em;
+		}
+		.front_matter_column3 {
+			width         : auto;  
+			text-align    : left;	
+			margin-right  : 0.5em;				
+		}
+		
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://D:\AD14\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td Style="width:70%">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">2018/11/6</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">10:54:39</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///F:\[17]%E5%A4%A7%E7%84%B6%E7%A7%91%E6%8A%80\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0.PcbDoc" class="file"><acronym title="F:\[17]大然科技\主控转接板\主控转接板-V1.0\主控转接板-V1.0.PcbDoc">F:\[17]大然科技\主控转接板\主控转接板-V1.0\主控转接板-V1.0.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td Style="Width:30%">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3" style="color : red">8</td></tr>
+</table>
+</td>
+</table>
+<hr><a name="IDCJYSEBRXG1LBKBEW5IERPN4CPNNSTJAULH4FO1EVA1ZKX0DNPQVF"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWC3N24E1QZ4TNA3GDXEIK0GL3KD0WD3IN4SSVDJ4IMBHFTGSZTQJ">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDERBL3THKGMRRGHAXLDIZ5QAO2CL2WOY4OTRMLHF2IKVVYL51AH1L">Silk primitive without silk layer</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJRTVGK4QED5SKYIZOPMDKGFQLFQG01EC04MNEKOLXOIG1SEHYI2L">Silk to Silk (Clearance=0mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGWOA4PBI21X1DBZ5BNYIIXZLGK1YTLEVMI42PKIXNVRSIOZCEVQO">Silk To Solder Mask (Clearance=0mil) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDV424B2UUBMSTCNRH3V3TCSSN1MZ50JG1LS1M0SIJAIDQVPC2FG5F">Minimum Solder Mask Sliver (Gap=4mil) (All),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID34JGU5ITXTVFCGYP2NEWMPWOGJNMNBT42N4251NP0BW2DGC5DKDI">Hole To Hole Clearance (Gap=4mil) (All),(All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUX1TIYBGFVVIC3AA3WAW1AJR1FBLR12Q5U421YEFOCHOXXJFFNNN">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZ13TT1DKGYXWP5XMNNHTR0GOOIJRAHSO33UKZREORWWNON5MY4YG">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDS54T2JYVW1L3CL3B15XRIJ2GUE14PXAQKIGKQIHU153PJFZAOOT">Width Constraint (Min=10mil) (Max=100mil) (Preferred=50mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHJ2XM1D1TY00N3OD2BB23B0TGGUSUOGZHJYODOGHUHED34KO5YXG">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJHEIYJ4PDME1B4XOJ5THFZJCLOI1FSRBSNBEV1DIZ0DZW0VOLLDF">Clearance Constraint (Gap=4mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOS5DVG31U0OJBOWCF0JVWRUJDFR3LJHYTWUCDX0YF1BJXPQZYIM">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNKKCTSYY1ARLETRTLE0C144VEMFYUF2SD1IN44C2IHMHMTMRI1QH">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">8</td>
+</tr>
+</table><br><hr><a name="IDERBL3THKGMRRGHAXLDIZ5QAO2CL2WOY4OTRMLHF2IKVVYL51AH1L"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk primitive without silk layer</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\[17]%E5%A4%A7%E7%84%B6%E7%A7%91%E6%8A%80\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1839.671mil|Location2.X=2622.261mil|Location1.Y=78.678mil|Location2.Y=832.939mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\[17]大然科技\主控转接板\主控转接板-V1.0\主控转接板-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1839.671mil|Location2.X=2622.261mil|Location1.Y=78.678mil|Location2.Y=832.939mil|Absolute=True">Silk To Board Region Clearance (Out of silkscreen region) : Text "Raspberry Pi Zero W" (1661.98mil,435.815mil)  Top Overlay</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\[17]%E5%A4%A7%E7%84%B6%E7%A7%91%E6%8A%80\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1671.907mil|Location2.X=1781.382mil|Location1.Y=2654.686mil|Location2.Y=2735.831mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\[17]大然科技\主控转接板\主控转接板-V1.0\主控转接板-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1671.907mil|Location2.X=1781.382mil|Location1.Y=2654.686mil|Location2.Y=2735.831mil|Absolute=True">Silk To Board Region Clearance (Out of silkscreen region) : Text "U?" (1662.496mil,2665.268mil)  Top Overlay</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\[17]%E5%A4%A7%E7%84%B6%E7%A7%91%E6%8A%80\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2531.679mil|Location2.X=2881.077mil|Location1.Y=1064.382mil|Location2.Y=1385.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\[17]大然科技\主控转接板\主控转接板-V1.0\主控转接板-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2531.679mil|Location2.X=2881.077mil|Location1.Y=1064.382mil|Location2.Y=1385.449mil|Absolute=True">Silk To Board Region Clearance (Out of silkscreen region) : Text "Header 4" (2462.287mil,1194.925mil)  Top Overlay</acronym></a><br></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDV424B2UUBMSTCNRH3V3TCSSN1MZ50JG1LS1M0SIJAIDQVPC2FG5F"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Minimum Solder Mask Sliver (Gap=4mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\[17]%E5%A4%A7%E7%84%B6%E7%A7%91%E6%8A%80\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2118.787mil|Location2.X=2150.787mil|Location1.Y=2208.425mil|Location2.Y=2240.425mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\[17]大然科技\主控转接板\主控转接板-V1.0\主控转接板-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2118.787mil|Location2.X=2150.787mil|Location1.Y=2208.425mil|Location2.Y=2240.425mil|Absolute=True">Via (2134.787mil,2224.425mil) Top Layer to Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=F:\[17]%E5%A4%A7%E7%84%B6%E7%A7%91%E6%8A%80\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2154.724mil|Location2.X=2174.535mil|Location1.Y=2202.685mil|Location2.Y=2250.055mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\[17]大然科技\主控转接板\主控转接板-V1.0\主控转接板-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2154.724mil|Location2.X=2174.535mil|Location1.Y=2202.685mil|Location2.Y=2250.055mil|Absolute=True">Pad U2-7(2164.63mil,2226.37mil)  Top Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="ID34JGU5ITXTVFCGYP2NEWMPWOGJNMNBT42N4251NP0BW2DGC5DKDI"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Hole To Hole Clearance (Gap=4mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\[17]%E5%A4%A7%E7%84%B6%E7%A7%91%E6%8A%80\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3720.921mil|Location2.X=3788.921mil|Location1.Y=1897.102mil|Location2.Y=1965.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\[17]大然科技\主控转接板\主控转接板-V1.0\主控转接板-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3720.921mil|Location2.X=3788.921mil|Location1.Y=1897.102mil|Location2.Y=1965.102mil|Absolute=True">Pad S1-0(3754.921mil,1931.102mil)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=F:\[17]%E5%A4%A7%E7%84%B6%E7%A7%91%E6%8A%80\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3711.079mil|Location2.X=3779.079mil|Location1.Y=1897.102mil|Location2.Y=1965.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\[17]大然科技\主控转接板\主控转接板-V1.0\主控转接板-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3711.079mil|Location2.X=3779.079mil|Location1.Y=1897.102mil|Location2.Y=1965.102mil|Absolute=True">Pad S1-0(3745.079mil,1931.102mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\[17]%E5%A4%A7%E7%84%B6%E7%A7%91%E6%8A%80\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3711.079mil|Location2.X=3779.079mil|Location1.Y=2173.677mil|Location2.Y=2241.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\[17]大然科技\主控转接板\主控转接板-V1.0\主控转接板-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3711.079mil|Location2.X=3779.079mil|Location1.Y=2173.677mil|Location2.Y=2241.677mil|Absolute=True">Pad S1-0(3745.079mil,2207.677mil)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=F:\[17]%E5%A4%A7%E7%84%B6%E7%A7%91%E6%8A%80\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3720.921mil|Location2.X=3788.921mil|Location1.Y=2173.677mil|Location2.Y=2241.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\[17]大然科技\主控转接板\主控转接板-V1.0\主控转接板-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3720.921mil|Location2.X=3788.921mil|Location1.Y=2173.677mil|Location2.Y=2241.677mil|Absolute=True">Pad S1-0(3754.921mil,2207.677mil)  Multi-Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDNKKCTSYY1ARLETRTLE0C144VEMFYUF2SD1IN44C2IHMHMTMRI1QH"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\[17]%E5%A4%A7%E7%84%B6%E7%A7%91%E6%8A%80\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3720.921mil|Location2.X=3788.921mil|Location1.Y=1897.102mil|Location2.Y=1965.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\[17]大然科技\主控转接板\主控转接板-V1.0\主控转接板-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3720.921mil|Location2.X=3788.921mil|Location1.Y=1897.102mil|Location2.Y=1965.102mil|Absolute=True">Pad S1-0(3754.921mil,1931.102mil)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=F:\[17]%E5%A4%A7%E7%84%B6%E7%A7%91%E6%8A%80\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3711.079mil|Location2.X=3779.079mil|Location1.Y=1897.102mil|Location2.Y=1965.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\[17]大然科技\主控转接板\主控转接板-V1.0\主控转接板-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3711.079mil|Location2.X=3779.079mil|Location1.Y=1897.102mil|Location2.Y=1965.102mil|Absolute=True">Pad S1-0(3745.079mil,1931.102mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\[17]%E5%A4%A7%E7%84%B6%E7%A7%91%E6%8A%80\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3711.079mil|Location2.X=3779.079mil|Location1.Y=2173.677mil|Location2.Y=2241.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\[17]大然科技\主控转接板\主控转接板-V1.0\主控转接板-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3711.079mil|Location2.X=3779.079mil|Location1.Y=2173.677mil|Location2.Y=2241.677mil|Absolute=True">Pad S1-0(3745.079mil,2207.677mil)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=F:\[17]%E5%A4%A7%E7%84%B6%E7%A7%91%E6%8A%80\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0\%E4%B8%BB%E6%8E%A7%E8%BD%AC%E6%8E%A5%E6%9D%BF-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3720.921mil|Location2.X=3788.921mil|Location1.Y=2173.677mil|Location2.Y=2241.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\[17]大然科技\主控转接板\主控转接板-V1.0\主控转接板-V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3720.921mil|Location2.X=3788.921mil|Location1.Y=2173.677mil|Location2.Y=2241.677mil|Absolute=True">Pad S1-0(3754.921mil,2207.677mil)  Multi-Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>

@@ -1,0 +1,6 @@
+12:19:41 **** Incremental Build of configuration Debug for project CCS811_EC ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+
+12:19:42 Build Finished (took 554ms)
+

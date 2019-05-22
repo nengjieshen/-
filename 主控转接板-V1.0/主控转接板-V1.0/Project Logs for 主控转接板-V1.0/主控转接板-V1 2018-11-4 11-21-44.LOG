@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=VCC Pin=Q2-3
+Added Pin To Net: NetName=VCC Pin=R_K1-1
+Change Net Name : Old Net Name=VCC New Net Name=VCC_IN
+Added Room: Name=Ö÷¿Ø×ª½Ó°å-V1.0
